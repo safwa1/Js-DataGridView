@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .control {
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-around;
+        }
+        
+        .check-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.1)
+        }
+        
+        .check-box label {
+            margin-left: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app" style="padding: 8% 14% ;background-color: #ebebeb;">
+
+    </div>
+    <div class="control">
+        <div class="check-box">
+            <input type="checkbox" name="sort" id="sort" onchange='sortingChange(this)'>
+            <label for="sort">enable sorting.</label>
+        </div>
+        <div class="check-box">
+            <input type="checkbox" name="centerText" id="centerText" onchange='centerText(this)'>
+            <label for="centerText">center text in cells.</label>
+        </div>
+        <div class="check-box">
+            <input type="checkbox" name="cellLines" id="cellLines" onchange='cellLines(this)'>
+            <label for="cellLines">shhow cell gridLines.</label>
+        </div>
+        <div class="check-box">
+            <input type="checkbox" name="noaltColor" id="noaltColor" onchange='altColor(this)' checked>
+            <label for="noaltColor">enable alternative row highLight.</label>
+        </div>
+    </div>
+
+    <script src="../src/DataGridView.js"></script>
+    <script>
+        let _id = 0;
+        let persons = [{
+            Id: _id++,
+            Name: `Ali`,
+            Age: _id * 10 / 2,
+            Salary: 300 * _id
+        }, {
+            Id: _id++,
+            Name: `Bain`,
+            Age: _id * 10 / 5,
+            Salary: 300 * _id
+        }, {
+            Id: _id++,
+            Name: `Itachi`,
+            Age: _id * 10 / 5,
+            Salary: 300 * _id
+        }, {
+            Id: _id++,
+            Name: `Zain`,
+            Age: _id * 10 / 5,
+            Salary: 300 * _id
+        }, {
+            Id: _id++,
+            Name: `Salah`,
+            Age: _id * 10 / 5,
+            Salary: 300 * _id
+        }, {
+            Id: _id++,
+            Name: `Yunes`,
+            Age: _id * 10 / 5,
+            Salary: 300 * _id
+        }];
+        let table = new DataGridView(persons, '#app', [
+            "المعرف",
+            "الإسم",
+            "العمر",
+            "المرتب"
+        ])
+        table.rightToLeft(true);
+
+        function sortingChange(e) {
+            if (e.checked) {
+                table.enableSorting();
+            } else {
+                location.reload();
+            }
+        }
+
+        function centerText(e) {
+            if (e.checked) {
+                table.setTextAlignment({
+                    target: 'table',
+                    textAlign: 'center'
+                })
+            } else {
+                table.setTextAlignment({
+                    target: 'table',
+                    textAlign: 'inherit'
+                })
+            }
+        }
+
+        function cellLines(e) {
+            table.useGridLines(e.checked);
+        }
+
+        function altColor(e) {
+            table.alternativeRowHighLight(e.checked);
+        }
+    </script>
+</body>
+
+</html>

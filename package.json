@@ -1,0 +1,26 @@
+{
+  "name": "js-datagridview",
+  "version": "1.0.0",
+  "description": "![](https://img.shields.io/badge/version-0.1-yellow)\r ![](https://img.shields.io/badge/Beta-on-red)",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/safwa1/Js-DataGridView.git"
+  },
+  "keywords": [
+    "DataGridView"
+  ],
+  "author": "SafwanAbdulghani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/safwa1/Js-DataGridView/issues"
+  },
+  "homepage": "https://github.com/safwa1/Js-DataGridView#readme"
+}
