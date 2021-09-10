@@ -26,6 +26,36 @@ const dataGrid = new DataGridView(
     );
 ```
 
+## Example
+
+```html
+<div id='app'></div>
+```
+
+
+```JavaScript
+const dataSource = [
+    {
+        Id: 1,
+        Name: `Ali`,
+        Age: 30,
+    },
+    {
+        Id: 2,
+        Name: `Ahmed`,
+        Age: 25,
+    },
+    {
+        Id: 3,
+        Name: `Zain`,
+        Age: 42,
+    },
+
+];
+
+const dataGrid = new DataGridView(dataSource, '#app');
+```
+
 <br>
 
 # Features
