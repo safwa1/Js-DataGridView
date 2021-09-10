@@ -1,4 +1,4 @@
-# JavaScrip DataGridView
+# JavaScript DataGridView
 ![](https://img.shields.io/badge/version-0.1-yellow)
 ![](https://img.shields.io/badge/Beta-on-red)
 
