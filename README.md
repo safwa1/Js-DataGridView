@@ -52,4 +52,4 @@ const dataGrid = new DataGridView(
 |getDataSource()|return current dataSource of dataGridView.|
 |enableSorting()|use it enable sort feature by click on header cell.|
 |alternativeRowHighLight()|use it enable alternative color for (even) row.|
-|search(text, columnIndex)|return current dataSource of dataGridView.|
+|search(text, columnIndex)|filter data in dataGridView.|
