@@ -71,7 +71,7 @@ const dataGrid = new DataGridView(dataSource, '#app');
 
 <br>
 
-# Methodss
+# Methods
 
 | MethodName | Description |
 |:----------|:-----------|
